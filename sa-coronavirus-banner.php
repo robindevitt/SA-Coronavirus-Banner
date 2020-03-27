@@ -40,7 +40,7 @@ add_action( 'wp_enqueue_scripts', 'sacb_enqueue_style' );
   function sacb_corona_banner_one(){
     echo '<div id="coronaBanner" class="coronaBanner">'.
       '<div class="coronaBanner__content">'.
-        '<a class="coronaBanner__websiteLink" href="https://sacoronavirus.co.za/" rel="noopener nofollow" title="SAcoronavirus.co.za">'.
+        '<a class="coronaBanner__websiteLink" target="_blank" href="https://sacoronavirus.co.za/" rel="noopener nofollow" title="SAcoronavirus.co.za">'.
           '<img class="coronaBanner__websiteLinkImg" src="'. plugins_url('assets/images/corona.jpg', __FILE__ ) .'" alt="SAcoronavirus.co.za" width="364" height="60" border="0" />'.
         '</a>'.
         '<div class="numbers">'.
