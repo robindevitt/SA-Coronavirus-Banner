@@ -5,7 +5,7 @@ The requirement for websites to link to the government Covid-19 website is conta
 
 > All Internet sites operating within .zaDNA top level domain name must have a landing page with a visible link to www.sacoronavirus.co.za.
 
-(View the official document here)[https://www.gov.za/sites/default/files/gcis_document/202003/43164gon-417.pdf]
+[View the official document here](https://www.gov.za/sites/default/files/gcis_document/202003/43164gon-417.pdf)
 
 ## Banner preview
 
@@ -14,7 +14,7 @@ The requirement for websites to link to the government Covid-19 website is conta
 
 ## Install the plugin
 
-1. (Download ZIP file from Github)[https://github.com/robindevitt/sa-coronavirus-banner/archive/master.zip]
+1. [Download ZIP file from Github](https://github.com/robindevitt/sa-coronavirus-banner/archive/master.zip)
 2. Now, head over to your WordPress admin area and go to Plugins » Add New page.
 3. You need to click on the ‘Choose file’ button and then select the ZIP file from your computer.
 4. Next, you need to click on the Install Now button. WordPress will now upload the zip archive from your computer to your website, unzip it, and install the plugin for you.
@@ -23,4 +23,4 @@ The requirement for websites to link to the government Covid-19 website is conta
 7. Select your banner Style and click **Save Settings**.
 
 ## Support or changes
-If you require any changes please feel free to (submit an issue)[https://github.com/robindevitt/sa-coronavirus-banner/issues] through GtiHub or email - pluginsupport@robindevitt.co.za .
+If you require any changes please feel free to [submit an issue](https://github.com/robindevitt/sa-coronavirus-banner/issues) through GtiHub or email - pluginsupport@robindevitt.co.za .
