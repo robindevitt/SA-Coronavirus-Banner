@@ -86,7 +86,7 @@ function sacb_options_page() {
     'manage_options',
     'sa-covid-19-banner',
     'sacb_options_page_content',
-    plugins_url( 'sa-coronavirus-banner/assets/images/flag.png' ),
+    plugin_dir_url( __FILE__ ) . ( '../assets/images/flag.png' ),
     2
   );
 }
