@@ -54,3 +54,25 @@ add_action( 'wp_enqueue_scripts', 'sacb_enqueue_style' );
       '</div>'.
     '</div>';
   }
+
+  register_activation_hook( __FILE__, 'fx_admin_notice_example_activation_hook' );
+
+function fx_admin_notice_example_activation_hook() {
+    set_transient( 'fx-admin-notice-example', true, 5 );
+}
+
+add_action( 'admin_notices', 'fx_admin_notice_example_notice' );
+
+function fx_admin_notice_example_notice(){
+
+    /* Check transient, if available display notice */
+    if( get_transient( 'fx-admin-notice-example' ) ){
+        ?>
+        <div class="updated notice is-dismissible">
+            <p>Thank you for using this plugin and giving South Africa the support it needs, <strong>You are awesome</strong>. <a href="<?php echo site_url();?>/wp-admin/admin.php?page=sa-covid-19-banner">Activate plugin settings</a></p>
+        </div>
+        <?php
+        /* Delete transient, only display this notice once. */
+        delete_transient( 'fx-admin-notice-example' );
+    }
+}
