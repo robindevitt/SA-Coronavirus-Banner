@@ -21,3 +21,6 @@ The requirement for websites to link to the government Covid-19 website is conta
 5. Once it is done you will see a success message. You can then click on Activate Plugin link to activate the plugin on your site.
 6. In the left hand admin menu look for **SA COVID-19** with the mini South African Flag. Click it.
 7. Select your banner Style and click **Save Settings**.
+
+## Support or changes
+If you require any changes please feel free to (submit an issue)[https://github.com/robindevitt/sa-coronavirus-banner/issues] through GtiHub or email - pluginsupport@robindevitt.co.za .
