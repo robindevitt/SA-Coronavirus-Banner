@@ -9,10 +9,7 @@
     // register a new section in the "sacb" page
     add_settings_section(
       'sacb_section_developers',
-      __(
-        '<p>The relevant Government Gazette, number 43164, can now be downloaded directly from the Government Printing Works (GPW) as a PDF.</p>'.
-        '<p>The requirement for websites to link to the government Covid-19 website is contained in paragraph 5.1.4.</p>'.
-        '<a class="button button-primary" href="https://www.gov.za/sites/default/files/gcis_document/202003/43164gon-417.pdf" target="_blank">View the pdf</a>', 'sacb' ),
+      __('', 'sacb' ),
       'sacb_section_developers_cb',
       'sacb'
     );
