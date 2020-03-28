@@ -13,20 +13,25 @@
 include_once 'includes/settings-page.php';
 
 // Actions
-$options = get_option( 'sacb_options' );
-
-add_filter( 'body_class', function( $classes ) {
   $options = get_option( 'sacb_options' );
-  return array_merge( $classes, array( $options['sacb_position'] ) );
-} );
 
-if( 'top' === $options['sacb_position'] ){
-  add_action( 'wp_head', 'sacb_corona_banner_one' );
-} else {
-  add_action( 'wp_footer', 'sacb_corona_banner_one' );
-}
+  add_filter( 'body_class', function( $classes ) {
+    $options = get_option( 'sacb_options' );
+    return array_merge( $classes, array( $options['sacb_position'] ) );
+  } );
 
-add_action( 'wp_enqueue_scripts', 'sacb_enqueue_style' );
+  register_activation_hook( __FILE__, 'sacb_corona_banner_activation' );
+
+  add_action( 'admin_notices', 'sacb_corona_banner_notice' );
+
+
+  if( 'top' === $options['sacb_position'] ){
+    add_action( 'wp_head', 'sacb_corona_banner_one' );
+  } else {
+    add_action( 'wp_footer', 'sacb_corona_banner_one' );
+  }
+  
+  add_action( 'wp_enqueue_scripts', 'sacb_enqueue_style' );
 
 // Fuctions
 
@@ -55,24 +60,22 @@ add_action( 'wp_enqueue_scripts', 'sacb_enqueue_style' );
     '</div>';
   }
 
-  register_activation_hook( __FILE__, 'fx_admin_notice_example_activation_hook' );
+// Plugin activation
+  function sacb_corona_banner_activation() {
+      set_transient( 'sacb_banner_admin_notice', true, 5 );
+  }
 
-function fx_admin_notice_example_activation_hook() {
-    set_transient( 'fx-admin-notice-example', true, 5 );
-}
+// plugin banner notice
+  function sacb_corona_banner_notice(){
 
-add_action( 'admin_notices', 'fx_admin_notice_example_notice' );
-
-function fx_admin_notice_example_notice(){
-
-    /* Check transient, if available display notice */
-    if( get_transient( 'fx-admin-notice-example' ) ){
-        ?>
-        <div class="updated notice is-dismissible">
-            <p>Thank you for using this plugin and giving South Africa the support it needs, <strong>You are awesome</strong>. <a href="<?php echo site_url();?>/wp-admin/admin.php?page=sa-covid-19-banner">Activate plugin settings</a></p>
-        </div>
-        <?php
-        /* Delete transient, only display this notice once. */
-        delete_transient( 'fx-admin-notice-example' );
-    }
-}
+      /* Check transient, if available display notice */
+      if( get_transient( 'sacb_banner_admin_notice' ) ){
+          ?>
+          <div class="updated notice is-dismissible">
+              <p>Thank you for using this plugin and giving South Africa the support it needs, <strong>You are awesome</strong>. <a href="<?php echo site_url();?>/wp-admin/admin.php?page=sa-covid-19-banner">Activate plugin settings</a></p>
+          </div>
+          <?php
+          /* Delete transient, only display this notice once. */
+          delete_transient( 'sacb_banner_admin_notice' );
+      }
+  }
