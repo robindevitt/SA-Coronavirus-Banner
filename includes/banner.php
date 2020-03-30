@@ -14,7 +14,7 @@ add_filter( 'body_class', function( $classes ) {
 
 } );
 
-function banner_display(){
+function banner(){
 
   $options = get_option( 'rbd_options' );
 
@@ -22,11 +22,11 @@ function banner_display(){
     return;
   }
 
-  \wp_enqueue_style( 'south-african-covid-19-page-banner', SA_COVID19_URL . 'resources/css/south-african-covid-19-page-banner.css', null, SA_COVID19_VERSION, false );
+  \wp_enqueue_style( 'sacovid-19-page-banner', SA_COVID19_URL . 'assets/css/covid-19.min.css', null, SA_COVID19_VERSION, false );
 
   ob_start();
 
-	include_once 'html/page-banner.php';
+	include_once 'user/banner.php';
 
 	$banner = ob_get_contents();
 

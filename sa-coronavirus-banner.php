@@ -22,7 +22,7 @@
 
 namespace SA\Covid19;
 
-require_once 'included/sa_covid_19.php';
+require_once 'includes/sa_covid_19.php';
 
 /**
  * Initialise the plugin.

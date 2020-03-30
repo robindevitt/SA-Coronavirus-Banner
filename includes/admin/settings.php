@@ -6,7 +6,7 @@
 
 namespace SA\Covid19\SettingsPage;
 
-include_once 'admin/sa-covid-19-options.php';
+include_once 'sa-covid-19-options.php';
 
 /**
  * Create top level menu item
@@ -20,7 +20,7 @@ function options() {
     'manage_options',
     'sa-covid-19',
     'options_page_content',
-    plugin_dir_url( __FILE__ ) . ( '../resources/images/flag.png' ),
+    plugin_dir_url( __FILE__ ) . ( '../../assets/images/flag.png' ),
     2
   );
 
