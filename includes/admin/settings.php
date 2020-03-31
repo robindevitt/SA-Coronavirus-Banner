@@ -20,7 +20,7 @@ function options() {
     'manage_options',
     'sa-covid-19',
     'options_page_content',
-    plugin_dir_url( __FILE__ ) . ( '../../assets/images/flag.png' ),
+    plugin_dir_url( __FILE__ ) . ( '../../assets/images/sa-flag.png' ),
     2
   );
 
