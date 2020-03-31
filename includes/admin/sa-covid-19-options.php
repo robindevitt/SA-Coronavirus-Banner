@@ -27,7 +27,7 @@ function options_page_content() {
   ?>
 
     <div class="wrap">
-
+      <img src="<?php echo plugin_dir_url( __FILE__ ) . ( '../../assets/images/covid-500.jpg' );?>"/>
       <h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
 
       <form action="options.php" method="post">
