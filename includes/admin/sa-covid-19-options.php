@@ -115,10 +115,12 @@ function banner_elements_fields(){
   $options = banner_options();
 
 ?>
-
   <p class="description">
-  <?php esc_html_e( 'Selected the fields your would like to display in your banner.' ); ?>
+    <?php esc_html_e( 'By default the banner will display the text if no fields are selected below. select the fields you would like to display.' ); ?>
+    </br>
+    Default text: <strong>For more information on COVID-19 and government regulation: Click Here</strong>
   </p>
+
 
   <input id="banner_style_image" type="checkbox" name="banner_options[display][image]" value="on" data-val="on" <?php echo ( 'on' === $options['display']['image'] ? 'checked' : '' );?> >
   <label for="banner_style_image">COVID-19 Bannner image</label>
@@ -129,6 +131,8 @@ function banner_elements_fields(){
   <input id="banner_whatsapp" type="checkbox" name="banner_options[display][whatsapp]" value="on" data-val="on" <?php echo ( 'on' === $options['display']['whatsapp'] ? 'checked' : '' );?> >
   <label for="banner_whatsapp">COVID-19 WhatsApp number</label>
 
+  <input id="banner_text" type="checkbox" name="banner_options[bannertext]" value="on" data-val="on" <?php echo ( 'on' === $options['bannertext'] ? 'checked' : '' );?> >
+  <label for="banner_text">COVID-19 Banner text</label>
 
 <?php }
 
