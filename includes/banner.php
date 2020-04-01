@@ -8,17 +8,17 @@ namespace SA\Covid19\BannerDisplay;
 
 add_filter( 'body_class', function( $classes ) {
 
-  $options = get_option( 'rbd_options' );
+  $options = get_option( 'banner_options' );
 
-  return array_merge( $classes, array( $options[ 'rbd_position' ] ) );
+  return array_merge( $classes, array( $options[ 'banner_position' ] ) );
 
 } );
 
 function banner(){
 
-  $options = get_option( 'rbd_options' );
+  $options = get_option( 'banner_options' );
 
-  if ( empty( $options[ 'rbd_position' ] ) ){
+  if ( empty( $options[ 'banner_position' ] ) ){
     return;
   }
 

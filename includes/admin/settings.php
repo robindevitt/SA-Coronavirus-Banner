@@ -15,13 +15,13 @@ function options() {
 
   // add top level menu page
   add_menu_page(
-    'SA Coronoa Banner',
-    'SA COVID-19',
-    'manage_options',
-    'sa-covid-19',
-    'options_page_content',
+    'SA Coronoa Banner',      // page title
+    'SA COVID-19',            // menu title
+    'manage_options',         // capability
+    'sa-covid-19',            // menu slug
+    'options_page_content',   // page content
     plugin_dir_url( __FILE__ ) . ( '../../assets/images/sa-flag.png' ),
-    2
+    2                         // position
   );
 
 }
@@ -31,28 +31,48 @@ function options() {
  */
 function settings() {
 
-  // register a new setting for "rbd" page
-  register_setting( 'rbd', 'rbd_options' );
+  register_setting(
+    'banner',         // Group
+    'banner_options'  // Option name
+  );
+  banner_position();
+  banner_style();
+}
 
-  // register a new section in the "rbd" page
+function banner_position() {
+
   add_settings_section(
-    'rbd_section',
-    __( '', 'rbd' ),
-    'section_cb',
-    'rbd'
+    'rbd_section', // id
+    '',            // title
+    '',  // callback
+    'banner'       // page
   );
 
-  // register a new field in the "rbd_section" section, inside the "rbd" page
   add_settings_field(
-    'rbd_position',
-    __( 'Banner style', 'rbd' ),
-    'add_form',
-    'rbd',
-    'rbd_section',
-    [
-      'label_for'           => 'rbd_position',
-      'class'               => 'rbd_row',
-      'rbd_custom_data'  => 'custom',
-    ]
+    'banner_position',  // slug-name
+    'Banner Position',  // title
+    'banner_position_field',         // callback
+    'banner',           // page
+    'rbd_section'       // section
   );
+
+}
+
+function banner_style() {
+
+  add_settings_section(
+    'banner_elements', // id
+    '',            // title
+    '',  // callback
+    'banner'       // page
+  );
+
+  add_settings_field(
+    'banner_elements',        // slug-name
+    'Banner Elements',        // title
+    'banner_elements_fields',  // callback
+    'banner',              // page
+    'rbd_section'          // section
+  );
+
 }

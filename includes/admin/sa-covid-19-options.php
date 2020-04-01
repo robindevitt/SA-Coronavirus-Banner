@@ -32,13 +32,13 @@ function options_page_content() {
 
       <form action="options.php" method="post">
         <?php
-        // output security fields for the registered setting "rbd"
-        settings_fields( 'rbd' );
-        // output setting sections and their fields
-        // (sections are registered for "rbd", each field is registered to a specific section)
-        do_settings_sections( 'rbd' );
-        // output save settings button
+
+        settings_fields( 'banner' );
+
+        do_settings_sections( 'banner' );
+
         submit_button( 'Save Settings' );
+
         ?>
       </form>
 
@@ -48,47 +48,50 @@ function options_page_content() {
 
 }
 
-
 /**
- * custom option and settings:
- * callback functions
+ * Get Banner Options
+ *
+ * @return array
+ *
  */
-function section_cb( $args ) {
 
+function banner_options(){
+  return get_option( 'banner_options' );
 }
 
-// call back with the form
-function add_form( $args ) {
+/**
+ * Banner position
+ *
+ * @uses banner_options
+ *
+ */
+function banner_position_field() {
 
-  // get the value of the setting we've registered with register_setting()
-  $options = get_option( 'rbd_options' );
+  $options = banner_options();
 
   ?>
 
-  <select id="<?php echo esc_attr( $args['label_for'] ); ?>"
-  data-custom="<?php echo esc_attr( $args['rbd_custom_data'] ); ?>"
-  name="rbd_options[<?php echo esc_attr( $args['label_for'] ); ?>]"
-  >
-    <option value="" <?php echo ( "banner_topScroll" === $options['rbd_position'] ? 'selected' : '' );?> >
+  <p class="description">
+    <?php esc_html_e( 'Selected your preferred banner position.' ); ?>
+  </p>
+
+  <select id="banner_position" name="banner_options[banner_position]">
+    <option value="" <?php echo ( "banner_topScroll" === $options['banner_position'] ? 'selected' : '' );?> >
     <?php esc_html_e( 'None', 'rbd' ); ?>
     </option>
-    <option value="banner_topScroll" <?php echo ( "banner_topScroll" === $options['rbd_position'] ? 'selected' : '' );?> >
+    <option value="banner_topScroll" <?php echo ( "banner_topScroll" === $options['banner_position'] ? 'selected' : '' );?> >
     <?php esc_html_e( 'Top & scroll', 'rbd' ); ?>
     </option>
-    <option value="banner_topFixed" <?php echo ( "banner_topFixed" === $options['rbd_position'] ? 'selected' : '' );?> >
+    <option value="banner_topFixed" <?php echo ( "banner_topFixed" === $options['banner_position'] ? 'selected' : '' );?> >
     <?php esc_html_e( 'Top & fixed', 'rbd' ); ?>
     </option>
-    <option value="banner_bottomScroll" <?php echo ( "banner_bottomScroll" === $options['rbd_position'] ? 'selected' : '' );?> >
+    <option value="banner_bottomScroll" <?php echo ( "banner_bottomScroll" === $options['banner_position'] ? 'selected' : '' );?> >
     <?php esc_html_e( 'Bottom & scroll', 'rbd' ); ?>
     </option>
-    <option value="banner_bottomFixed" <?php echo ( "banner_bottomFixed" === $options['rbd_position'] ? 'selected' : '' );?> >
+    <option value="banner_bottomFixed" <?php echo ( "banner_bottomFixed" === $options['banner_position'] ? 'selected' : '' );?> >
     <?php esc_html_e( 'Bottom & fixed', 'rbd' ); ?>
     </option>
   </select>
-
-  <p class="description">
-  <?php esc_html_e( 'Selected your preferred banner position.', 'rbd' ); ?>
-  </p>
 
   <ul>
     <li><strong>Top & scroll : </strong>Displays at the top of the site and scrolls with the page.</li>
@@ -100,5 +103,33 @@ function add_form( $args ) {
   <?php
 
 }
+
+/**
+ * Banner style
+ *
+ * @uses banner_options
+ *
+ */
+function banner_elements_fields(){
+
+  $options = banner_options();
+
+?>
+
+  <p class="description">
+  <?php esc_html_e( 'Selected the fields your would like to display in your banner.' ); ?>
+  </p>
+
+  <input id="banner_style_image" type="checkbox" name="banner_options[display][image]" value="on" data-val="on" <?php echo ( 'on' === $options['display']['image'] ? 'checked' : '' );?> >
+  <label for="banner_style_image">COVID-19 Bannner image</label>
+
+  <input id="banner_number" type="checkbox" name="banner_options[display][number]" value="on" data-val="on" <?php echo ( 'on' === $options['display']['number'] ? 'checked' : '' );?> >
+  <label for="banner_number">COVID-19 Telephone number</label>
+
+  <input id="banner_whatsapp" type="checkbox" name="banner_options[display][whatsapp]" value="on" data-val="on" <?php echo ( 'on' === $options['display']['whatsapp'] ? 'checked' : '' );?> >
+  <label for="banner_whatsapp">COVID-19 WhatsApp number</label>
+
+
+<?php }
 
 ?>
