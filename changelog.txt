@@ -5,7 +5,9 @@ All notable changes to this project will be documented in this file.
 
 ## [1.0.1] -
 - updated read me files
-- 
+- plugin image url correction
+- class name changes
+- added banner options so the user can choose what to display
 
 ## [1.0.0] - 2020-03-31
 - Released to WordPress Repository
