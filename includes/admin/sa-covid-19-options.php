@@ -77,26 +77,22 @@ function banner_position_field() {
 
   <select id="banner_position" name="banner_options[banner_position]">
     <option value="" <?php echo ( "banner_topScroll" === $options['banner_position'] ? 'selected' : '' );?> >
-    <?php esc_html_e( 'None', 'rbd' ); ?>
+      <?php esc_html_e( 'None', 'rbd' ); ?>
     </option>
     <option value="banner_topScroll" <?php echo ( "banner_topScroll" === $options['banner_position'] ? 'selected' : '' );?> >
-    <?php esc_html_e( 'Top & scroll', 'rbd' ); ?>
+      <?php esc_html_e( 'Top & scroll', 'rbd' ); ?>
     </option>
     <option value="banner_topFixed" <?php echo ( "banner_topFixed" === $options['banner_position'] ? 'selected' : '' );?> >
-    <?php esc_html_e( 'Top & fixed', 'rbd' ); ?>
-    </option>
-    <option value="banner_bottomScroll" <?php echo ( "banner_bottomScroll" === $options['banner_position'] ? 'selected' : '' );?> >
-    <?php esc_html_e( 'Bottom & scroll', 'rbd' ); ?>
+      <?php esc_html_e( 'Top & fixed', 'rbd' ); ?>
     </option>
     <option value="banner_bottomFixed" <?php echo ( "banner_bottomFixed" === $options['banner_position'] ? 'selected' : '' );?> >
-    <?php esc_html_e( 'Bottom & fixed', 'rbd' ); ?>
+      <?php esc_html_e( 'Bottom & fixed', 'rbd' ); ?>
     </option>
   </select>
 
   <ul>
     <li><strong>Top & scroll : </strong>Displays at the top of the site and scrolls with the page.</li>
     <li><strong>Top & fixed : </strong>Displays fixed at the top of the screen and the site scrolls behind it.</li>
-    <li><strong>Bottom & scroll : </strong>Displays at the bottom of the site and is only viewed once scrolled to the bottom of the site.</li>
     <li><strong>Bottom & fixed : </strong>Displays fixed at the bottom of the screen and the site scrolls behind it.</li>
   </ul>
 

@@ -10,7 +10,11 @@ add_filter( 'body_class', function( $classes ) {
 
   $options = get_option( 'banner_options' );
 
-  return array_merge( $classes, array( $options[ 'banner_position' ] ) );
+  if ( empty( $options[ 'display'] ) && !empty( $options[ 'bannertext'] ) ){
+    return array_merge( $classes, array( $options[ 'banner_position' ] , 'textBannner' ) );
+  } else {
+    return array_merge( $classes, array( $options[ 'banner_position' ] ) );
+  }
 
 } );
 
