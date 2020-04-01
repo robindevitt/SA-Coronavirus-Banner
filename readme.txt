@@ -13,13 +13,13 @@ Make it easy for South African WordPress sites to add the Covid-19 banner as req
 
 == Description ==
 
-The South African has required all .za domain names should have a way to direct people to a legitimate source of information.
+All .za domain names are required by the South African Government to have a way to direct people to a legitimate source of information regarding COVID-19. 
 
-The relevant Government Gazette, number 43164, can now be downloaded directly from the Government Printing Works (GPW) as a PDF.
+The relevant Government Gazette, number 43164, is available to be downloaded from the Government Printing Works (GPW) as a PDF.
 
-The requirement for websites to link to the government Covid-19 website is contained in paragraph 5.1.4.
+The requirement for websites to link to the government COVID-19 website is set out in paragraph 5.1.4.
 
-If you require any changes please feel or come across a bug free to submit an issue through https://github.com/robindevitt/sa-coronavirus-banner/issues.
+Should you require any changes or if you come across a bug please submit a query through https://github.com/robindevitt/sa-coronavirus-banner/issues.
 
 == Installation ==
 

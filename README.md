@@ -4,11 +4,12 @@
 
 ![Banner preview](https://github.com/robindevitt/sa-coronavirus-banner/blob/master/assets/images/covid-1000.jpg)
 
-The South African Government has required all .za domain names should have a way to direct people to a legitimate source of information.
+All .za domain names are required by the South African Government to have a way to direct people to a legitimate source of information regarding COVID-19.
 
-The relevant Government Gazette, number 43164, can now be downloaded directly from the Government Printing Works (GPW) as a PDF.</p>
+The relevant Government Gazette, number 43164, is available to be downloaded from the Government Printing Works (GPW) as a PDF.
 
-The requirement for websites to link to the government Covid-19 website is contained in paragraph 5.1.4.
+The requirement for websites to link to the government COVID-19 website is set out in paragraph 5.1.4.
+
 
 > All Internet sites operating within .zaDNA top level domain name must have a landing page with a visible link to www.sacoronavirus.co.za.
 
