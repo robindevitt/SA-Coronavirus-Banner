@@ -47,7 +47,6 @@
 	position: fixed;
 	width: 100%;
 	bottom: 0px;
-	min-height: 86px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -129,7 +128,6 @@ a.covid-whatsapp-link{
 	}
 	.banner_topFixed .covid-banner,
 	.banner_bottomFixed .covid-banner{
-		min-height: 140px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -154,7 +152,6 @@ a.covid-whatsapp-link{
 @media screen and ( max-width: 500px ){
 	.banner_topFixed .covid-banner,
 	.banner_bottomFixed .covid-banner{
-		height: 140px;
 		font-size: 12px;
 	}
 

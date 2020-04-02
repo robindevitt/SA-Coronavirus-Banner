@@ -27,4 +27,24 @@ function sa_covid_19() {
 
 	add_action( 'wp_footer', 						 'SA\Covid19\BannerDisplay\banner_css' );
 
+
+}
+
+function activation_hook() {
+    set_transient( 'notice-transient', true, 5 );
+}
+
+
+function notice(){
+	$current_user = wp_get_current_user();
+    /* Check transient, if available display notice */
+    if( get_transient( 'notice-transient' ) ){
+        ?>
+        <div class="updated notice is-dismissible">
+            <p>Thank you for showing the support South Africa needs! <strong>You are awesome</strong>!</p>
+        </div>
+        <?php
+        /* Delete transient, only display this notice once. */
+        delete_transient( 'fx-admin-notice-example' );
+    }
 }
