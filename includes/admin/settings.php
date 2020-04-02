@@ -33,46 +33,79 @@ function settings() {
 
   register_setting(
     'banner',         // Group
-    'banner_options'  // Option name
+    'banner_options',  // Option name
+    array(
+      'type' => 'string',
+      'sanitize_callback' => 'validate_options'
+    )
   );
   banner_position();
   banner_style();
+  banner_colours();
 }
 
+/**
+ * banner position settings
+ */
 function banner_position() {
 
   add_settings_section(
     'rbd_section', // id
     '',            // title
-    '',  // callback
+    '',            // callback
     'banner'       // page
   );
 
   add_settings_field(
-    'banner_position',  // slug-name
-    'Banner Position',  // title
-    'banner_position_field',         // callback
-    'banner',           // page
-    'rbd_section'       // section
+    'banner_position',       // slug-name
+    'Banner Position',       // title
+    'banner_position_field', // callback
+    'banner',                // page
+    'rbd_section'            // section
   );
 
 }
 
+/**
+ * banner style settings
+ */
 function banner_style() {
 
   add_settings_section(
     'banner_elements', // id
-    '',            // title
-    '',  // callback
-    'banner'       // page
+    '',                // title
+    '',                // callback
+    'banner'           // page
   );
 
   add_settings_field(
     'banner_elements',        // slug-name
     'Banner Elements',        // title
-    'banner_elements_fields',  // callback
-    'banner',              // page
-    'rbd_section'          // section
+    'banner_elements_fields', // callback
+    'banner',                 // page
+    'rbd_section'             // section
+  );
+
+}
+
+/**
+ * banner colour settings
+ */
+function banner_colours() {
+
+  add_settings_section (
+    'banner_colours', // id
+    '',               // title
+    '',               // callback
+    'banner'          // page
+  );
+
+  add_settings_field(
+    'banner_colours',         // slug-name
+    'Banner Colours',         // title
+    'banner_colour_fields',   // callback
+    'banner',                 // page
+    'rbd_section'             // section
   );
 
 }

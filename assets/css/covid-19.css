@@ -16,7 +16,6 @@
 
 .covid-banner {
 	display: block;
-	background-color: white;
 	text-align: center;
 	padding: 0.5em;
 	font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
@@ -91,20 +90,18 @@ img.covid-website-link-img {
 
 a.covid-hotline-link,
 a.covid-whatsapp-link,
-a.covid-text-link,
-a.covid-hotline-link:visited,
-a.covid-whatsapp-link:visited,
-a.covid-text-link:visited {
+a.covid-text-link{
 	display: inline-block;
 	text-decoration: none;
-	color: #e95211;
 }
 
+a.covid-hotline-link:visited,
+a.covid-whatsapp-link:visited,
+a.covid-text-link:visited,
 a.covid-hotline-link:hover,
 a.covid-whatsapp-link:hover,
-a.covid-text-link:hover, {
+a.covid-text-link:hover {
 	text-decoration: underline;
-	color: #e95211;
 }
 
 a.covid-hotline-link,

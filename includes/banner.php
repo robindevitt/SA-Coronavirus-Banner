@@ -11,9 +11,13 @@ add_filter( 'body_class', function( $classes ) {
   $options = get_option( 'banner_options' );
 
   if ( empty( $options[ 'display'] ) && !empty( $options[ 'bannertext'] ) ){
+
     return array_merge( $classes, array( $options[ 'banner_position' ] , 'textBannner' ) );
+
   } else {
+
     return array_merge( $classes, array( $options[ 'banner_position' ] ) );
+
   }
 
 } );
@@ -37,6 +41,20 @@ function banner(){
 	ob_end_clean();
 
 	echo $banner;
+}
+
+function banner_css(){
+
+  $options = get_option( 'banner_options' );
+
+  if ( empty( $options[ 'colours' ] ) ){
+    return;
+  }
+  echo '<style>
+  .covid-banner{ background-color:'. $options[ 'colours' ][ 'background' ].'}
+  .covid-banner{ color: '. $options[ 'colours' ][ 'text' ].' }
+  .covid-banner a{ color: '. $options[ 'colours' ][ 'link' ].'}
+  </style>';
 }
 
  ?>
