@@ -39,6 +39,7 @@ function init() {
 
 	sa_covid_19();
 }
+add_action( 'plugins_loaded', 'SA\Covid19\init' );
 
 register_activation_hook( __FILE__, 'SA\Covid19\activation_hook' );
 
