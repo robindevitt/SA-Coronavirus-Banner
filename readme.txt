@@ -32,6 +32,14 @@ Should you require any changes or if you come across a bug please submit a query
 1. Navigate to the SA COVID-19 in the sidebar menu to activate the location of the banner.
 
 == Changelog ==
+
+= [2.0.2] =
+- we found a whole lot of gremlins once adding the plugin to a variety of sites, this should resolve those issues.
+
+= [2.0.1] =
+- add_action
+
+
 = [2.0.0] =
 * Customise how you want the banner to be displayed.
 
