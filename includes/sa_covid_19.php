@@ -17,7 +17,7 @@ function sa_covid_19() {
 
 	add_action( 'admin_enqueue_scripts', 'SA\Covid19\Script\add_color_picker' );
 
-	add_action( 'wp_enqueue_scripts', 		'SA\Covid19\Script\banner_height' );
+	add_action( 'wp_enqueue_scripts', 	 'SA\Covid19\Script\banner_height' );
 
 	add_action( 'admin_init', 					 'SA\Covid19\SettingsPage\settings' );
 
@@ -26,7 +26,6 @@ function sa_covid_19() {
 	add_action( 'wp_footer', 						 'SA\Covid19\BannerDisplay\banner' );
 
 	add_action( 'wp_footer', 						 'SA\Covid19\BannerDisplay\banner_css' );
-
 
 }
 

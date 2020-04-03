@@ -17,10 +17,10 @@
 .covid-banner {
 	display: block;
 	text-align: center;
-	padding: 0.5em;
+	padding: 10px;
 	font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
-	font-size: 0.8em;
-	line-height: 1.6em;
+	font-size: 14px;
+	line-height: 16px;
 }
 
 .banner_topScroll .covid-banner {
@@ -28,7 +28,7 @@
 	width: 100%;
 	top: 0px;
 	left: 0px;
-	z-index: 99998;
+	z-index: 99999999;
 	border-bottom: 1px solid;
 }
 
@@ -37,7 +37,7 @@
 	width: 100%;
 	top: 0px;
 	left: 0px;
-	z-index: 99998;
+	z-index: 99999999;
 	-webkit-box-shadow: 0px 5px 7px 5px rgba(102,102,102,0.3);
 	-moz-box-shadow: 0px 5px 7px 5px rgba(102,102,102,0.3);
 	box-shadow: 0px 5px 7px 5px rgba(102,102,102,0.3);
@@ -52,7 +52,7 @@
 	align-items: center;
 	text-align: center;
 	left: 0px;
-	z-index: 99998;
+	z-index: 99999999;
 	-webkit-box-shadow: 0px 5px 7px 5px rgba(102,102,102,0.3);
 	-moz-box-shadow: 0px 5px 7px 5px rgba(102,102,102,0.3);
 	box-shadow: 0px 5px 7px 5px rgba(102,102,102,0.3);
@@ -66,7 +66,9 @@
 	flex-wrap: wrap;
 }
 
-.covid-text {
+p.covid-text {
+	font-size: 14px;
+	line-height: 16px;
 	width: 100%;
 	text-align: center;
 	margin: 0px;
@@ -92,6 +94,7 @@ a.covid-whatsapp-link,
 a.covid-text-link{
 	display: inline-block;
 	text-decoration: none;
+	font-size: 14px;
 }
 
 a.covid-hotline-link:visited,

@@ -30,16 +30,16 @@ require_once 'includes/sa_covid_19.php';
 
 function init() {
 
-
-
 	define( 'SA_COVID19_VERSION', '2.0.0' );
 	define( 'SA_COVID19_DIR', plugin_dir_path( __FILE__ ) );
 	define( 'SA_COVID19_URL', plugin_dir_url( __FILE__ ) );
 
-
 	sa_covid_19();
 }
+
 add_action( 'plugins_loaded', 'SA\Covid19\init' );
+
+add_action('upgrader_process_complete', 'SA\Covid19\init');
 
 register_activation_hook( __FILE__, 'SA\Covid19\activation_hook' );
 
