@@ -1,5 +1,5 @@
 # SA COVID-19 Banner
-## Wordress Directory
+## WordPress Directory
 You can install the plugin directly to your site. [View plugin](https://wordpress.org/plugins/sa-coronavirus-banner)
 
 ## Banner preview

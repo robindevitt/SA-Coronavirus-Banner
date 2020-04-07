@@ -30,7 +30,7 @@ require_once 'includes/sa_covid_19.php';
 
 function init() {
 
-	define( 'SA_COVID19_VERSION', '2.0.0' );
+	define( 'SA_COVID19_VERSION', '2.0.3' );
 	define( 'SA_COVID19_DIR', plugin_dir_path( __FILE__ ) );
 	define( 'SA_COVID19_URL', plugin_dir_url( __FILE__ ) );
 
