@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [2.0.3] - 2020-04-07
+- Resolve a jQuery issue with other plugins, this fix should resolve that.
+
 ## [2.0.2] - 2020-04-03
 - we found a whole lot of gremlins once adding the plugin to a variety of sites, this should resolve those issues.
 

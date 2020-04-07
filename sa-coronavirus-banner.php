@@ -2,7 +2,7 @@
 /**
 	* Plugin Name: SA Coronavirus Banner
 	* Description: Options to add a banner of your choice to your WordPress site as stipulated by the South African Goverment.
-	* Version: 2.0.2
+	* Version: 2.0.3
 	* Author: Robin Devitt
   * Author URI : https://github.com/robindevitt/
 	* License: GNU General Public License v2.0

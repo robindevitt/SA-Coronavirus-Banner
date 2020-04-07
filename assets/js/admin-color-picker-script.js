@@ -1,17 +1,17 @@
-(function( $ ) {
+(function( jQuery ) {
 
   // Add Color Picker to all inputs that have 'color-field' class
-  $(function() {
-    $('.color-field').wpColorPicker();
+  jQuery(function() {
+    jQuery('.color-field').wpColorPicker();
   });
 
 })( jQuery );
 
-(function( $ ) {
-    $(function() {
+(function( jQuery ) {
+    jQuery(function() {
 
         // Add Color Picker to all inputs that have 'color-field' class
-        $( '.cpa-color-picker' ).wpColorPicker();
+        jQuery( '.cpa-color-picker' ).wpColorPicker();
 
     });
 })( jQuery );
