@@ -2,9 +2,9 @@
 Contributors: robinrsa
 Tags: south-africa, covid-19
 Requires at least: 5.0
-Version: 2.0.3
-Tested up to: 5.4
-Stable tag: 2.0.3
+Version: 2.1.0
+Tested up to: 5.7
+Stable tag: 2.1.0
 Requires PHP: 5.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -32,6 +32,10 @@ Should you require any changes or if you come across a bug please submit a query
 1. Navigate to the SA COVID-19 in the sidebar menu to activate the location of the banner.
 
 == Changelog ==
+
+= [2.1.0] =
+- Minor CSS changes to allow adminbar to be visible when enabled and viewing the site as an admin.
+- Latest WordPress Version Support
 
 = [2.0.3] =
 - Resolves a jQuery issue with other plugins, this fix should resolve that.

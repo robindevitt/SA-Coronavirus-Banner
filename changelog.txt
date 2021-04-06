@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [2.1.0] - 2021-04-06
+- Minor CSS changes to allow adminbar to be visible when enabled and viewing the site as an admin.
+- Latest WordPress Version Support
+
 ## [2.0.3] - 2020-04-07
 - Resolve a jQuery issue with other plugins, this fix should resolve that.
 
