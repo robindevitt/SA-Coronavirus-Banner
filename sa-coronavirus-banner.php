@@ -9,7 +9,7 @@
 	* License URI: https://www.gnu.org/licenses/gpl-2.0.html
 	* Text Domain: sa-coronavirus-banner
     * Tags: South Africa, Corona Virus, COVID-19
-    * Tested up to: 5.5.3
+    * Tested up to: 5.9.1
     * Stable tag: 5.0
     *
     * Make it easy for South African WordPress sites to add the Covid-19 banner as required by the South African government.

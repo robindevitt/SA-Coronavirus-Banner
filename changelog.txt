@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [2.1.1] - 2022-03-10
+- Update Tested up to version of WordPress to 5.9.1
+
 ## [2.1.0] - 2021-04-06
 - Minor CSS changes to allow adminbar to be visible when enabled and viewing the site as an admin.
 - Latest WordPress Version Support
